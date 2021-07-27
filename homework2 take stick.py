@@ -21,13 +21,14 @@ y = []
 for i in range (20):
     b = 3*i 
     y.append(b)  
-    
+
 for i in range(100):
 #player1 take stick
   take_stick =  int(input( str(Name) + ", How many sticks you will take (1 or 2): ")) 
   
   if (0 < take_stick <= 2) and (take_stick <= N) : 
-    N = N - take_stick      
+    N = N - take_stick    
+    
     if (N == 0):
       print(str(Name) + ", take the last stick ")  
       print()
