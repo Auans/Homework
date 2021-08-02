@@ -12,7 +12,6 @@ def LargeNumber(number):
     for i in number:
         x = str(i)*2
         List.append((x[:], i))
-        print(List)
         List.sort(reverse= True)
         
     for i in List:
