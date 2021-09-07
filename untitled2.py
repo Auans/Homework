@@ -4,9 +4,7 @@ Created on Sun Sep  5 14:37:03 2021
 
 @author: Thanakorn
 """
-
 import pandas as pd
-import numpy as np
 avocado = pd.read_csv("avocado.csv")
 
 #1)Which region sold the largest amount of avocado ?
@@ -42,3 +40,9 @@ number = pd.DataFrame({'number_4046':number_4046,'number_4225':number_4225,'numb
 number['total number'] = number['number_4046'] +number['number_4225'] + number['number_4770']
 number.sort_values(by = 'total number')
 #The region that sold the largest of number of avocadoes is SouthCentral 
+
+#6) Normally, the customers buy the avocados by unit or in a bags ?
+avocado['Total unit'] = avocado['4046'] + avocado['4225'] + avocado['4770']
+volume = avocado[['Total Volume','Total unit','Total Bags']]
+volume.sum()
+#Normally, the customers buy the avocados by unit.
